@@ -1,61 +1,58 @@
-let getPlus = (a, b) => a + b  ;
+let getPlus = (a, b) => a + b;
 let getMinus = (a, b) => a - b;
 let getMultiply = (a, b) => a * b;
 let getDivision = (a, b) => a / b;
 
 
- function q() {
+function question() {
+
+
     const firstNumber = prompt('введите первое число');
     const lastNumber = prompt('введите второе число');
     const operator = prompt('введите оператор');
 
-   
-   
-   
-
-   if (firstNumber || lastNumber !== NaN){
+   if (firstNumber && lastNumber && operator !== null){
 
    
-   
-
-      if(operator === '+'|| '-'|| '*'|| '/'){
+   if ( Number (firstNumber) && Number (lastNumber) !== isNaN){
 
    
       switch(operator){
         
          case "+":
-            if(operator == "+"){
-             alert( getPlus(+firstNumber, +lastNumber));
-            }
+            alert( getPlus(+firstNumber, +lastNumber));
             break;
+
          case "-":
-            if(operator == "-"){
-               alert( getMinus(+firstNumber, +lastNumber));
-            }
+            alert( getMinus(+firstNumber, +lastNumber));
             break;
+
          case "*":
-            if(operator == "*"){
-               alert( getMultiply(+firstNumber, +lastNumber));
-            }
+            alert( getMultiply(+firstNumber, +lastNumber));
             break;
+
          case "/":
-            if(operator == "/"){
-               alert( getDivision(+firstNumber, +lastNumber));
-            }  
+            alert( getDivision(+firstNumber, +lastNumber));
             break;
+
+         default:
+            alert('не коректный оператор')
+            break
       }
-      }else{
-         alert('некорректный оператор')
-      }
-      
+
+ 
    }else{
-      
-      alert('не число')
-   }
+      alert('не число');
    }
 
+   }else{
+      alert('не нажимай на отмену')
+   }
 
-  q();
+}
+
+
+  question();
 
 
 
